@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import WeatherDisplay from './components/WeatherDisplay';
 import SearchBar from './components/SearchBar';
@@ -47,35 +47,28 @@ function App() {
 
     const geolocationOptions = {
       enableHighAccuracy: true,
-      timeout: 10000,        // 10 seconds timeout
-      maximumAge: 0         // Force fresh location
+      timeout: 10000,
+      maximumAge: 0
     };
 
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
           const { latitude, longitude } = position.coords;
-          console.log('Got coordinates:', latitude, longitude); // Debug log
-          
           const locationString = `${latitude},${longitude}`;
-          console.log('Location string:', locationString); // Debug log
           
           const currentWeather = await getCurrentWeather(locationString);
-          console.log('Weather data received:', currentWeather); // Debug log
-          
           const forecast = await getForecast(locationString);
           
           setWeatherData(currentWeather);
           setForecastData(forecast);
           
-          // Use the city name from the API response if available
           if (currentWeather.name) {
             setLocation(`${currentWeather.name}, ${currentWeather.sys.country}`);
           } else {
             setLocation(`Coordinates: ${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
           }
         } catch (error) {
-          console.error('Error fetching weather data:', error); // Debug log
           setError(`Error getting weather for your location: ${error.message}`);
         } finally {
           setLoading(false);
@@ -83,7 +76,6 @@ function App() {
       },
       (error) => {
         setLoading(false);
-        console.error('Geolocation error:', error); // Debug log
         
         switch (error.code) {
           case error.PERMISSION_DENIED:
