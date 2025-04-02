@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API_KEY, BASE_URL } from '../config';
-import { handleError, ErrorCodes } from '../utils/errorHandler';
+import { handleError } from '../utils/errorHandler';
 
 const validateLocation = (location) => {
   if (!location || typeof location !== 'string') {

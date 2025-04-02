@@ -3,7 +3,6 @@ import './App.css';
 import WeatherDisplay from './components/WeatherDisplay';
 import SearchBar from './components/SearchBar';
 import { getCurrentWeather, getForecast } from './services/weatherService';
-import { handleError } from './utils/errorHandler';
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);

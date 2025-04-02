@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based weather application that provides current weather and 5-day forecast information using the OpenWeatherMap API.
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+   ```
+   REACT_APP_OPENWEATHERMAP_API_KEY=your_api_key_here
+   ```
+   You can get an API key by signing up at [OpenWeatherMap](https://openweathermap.org/api).
+
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
 ## Available Scripts
 
