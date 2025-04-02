@@ -1,24 +1,90 @@
 # Weather App
 
-A React-based weather application that provides current weather and 5-day forecast information using the OpenWeatherMap API.
+A React-based weather application that provides current weather and 5-day forecast information using the OpenWeatherMap API. The app features a clean, modern UI with responsive design and supports searching by city name, ZIP code, or coordinates.
 
-## Setup
+## Features
 
-1. Clone the repository
+- Current weather display with temperature, conditions, and wind speed
+- 5-day weather forecast
+- Search by city name, ZIP code, or coordinates
+- Automatic location detection
+- Responsive design for all devices
+- Error handling and user feedback
+- Environment variable configuration for API key
+
+## Prerequisites
+
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
+- OpenWeatherMap API key (get one at [OpenWeatherMap](https://openweathermap.org/api))
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/beginner4a3/weather-app.git
+   cd weather-app
+   ```
+
 2. Install dependencies:
    ```bash
    npm install
    ```
+
 3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
    ```
    REACT_APP_OPENWEATHERMAP_API_KEY=your_api_key_here
    ```
-   You can get an API key by signing up at [OpenWeatherMap](https://openweathermap.org/api).
 
 4. Start the development server:
    ```bash
    npm start
    ```
+
+The app will be available at `http://localhost:3000`
+
+## Project Structure
+
+```
+weather-app/
+├── public/              # Static files
+├── src/
+│   ├── components/      # React components
+│   ├── services/        # API services
+│   ├── utils/          # Utility functions
+│   ├── App.js          # Main application component
+│   └── index.js        # Application entry point
+├── .env.example        # Example environment variables
+├── package.json        # Project dependencies
+└── README.md          # Project documentation
+```
+
+## Dependencies
+
+- React 18.2.0
+- Axios 1.6.7
+- React Scripts 5.0.1
+
+## Deployment
+
+This project is configured for deployment on Vercel. The `vercel.json` file contains the necessary configuration for proper routing and build settings.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_twitter)
+Project Link: [https://github.com/beginner4a3/weather-app](https://github.com/beginner4a3/weather-app)
 
 ## Available Scripts
 
