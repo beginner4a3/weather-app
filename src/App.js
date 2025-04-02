@@ -93,9 +93,16 @@ function App() {
             );
             break;
           default:
-            setError(
-              'An error occurred while getting your location. Please try searching by city name instead.'
-            );
+            // Check if we're in a non-secure context (HTTP instead of HTTPS)
+            if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
+              setError(
+                'Geolocation requires a secure connection (HTTPS). Please try searching by city name instead, or access this site via HTTPS.'
+              );
+            } else {
+              setError(
+                'An error occurred while getting your location. Please try searching by city name instead.'
+              );
+            }
         }
       },
       geolocationOptions
@@ -117,6 +124,11 @@ function App() {
           >
             {loading ? 'Getting Location...' : 'Use My Location'}
           </button>
+          {window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && (
+            <div className="https-warning">
+              Note: "Use My Location" requires HTTPS. This feature works on localhost but may not work on some hosting environments.
+            </div>
+          )}
         </div>
         {loading && <div className="loading">Loading weather data...</div>}
         {error && <div className="error">{error}</div>}

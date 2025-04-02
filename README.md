@@ -2,12 +2,29 @@
 
 A React-based weather application that provides current weather and 5-day forecast information using the OpenWeatherMap API. The app features a clean, modern UI with responsive design and supports searching by city name, ZIP code, or coordinates.
 
+## About the Developer
+
+**Name:** Sweekar Sonti  
+**Email:** sontisweekar9@gmail.com  
+**LinkedIn:** [Sweekar Sonti](https://www.linkedin.com/in/sweekarsonti)
+
+## About PM Accelerator
+
+**Overview:**  
+Hiring and getting hired for product management roles is hard. In the short timeframe of an interview, it is difficult to precisely assess and display the necessary, complex skills.
+
+Product Managers play key roles in a company. Hiring for those positions shouldn't be a guessing game.
+
+It is our vision, to make it simple and beneficial for Product Managers to accurately display their skills and empower hiring companies to choose the right Product Manager every time.
+
+**Sign up now:** [PM Accelerator](https://pm-accelerator.webflow.io/)
+
 ## Features
 
 - Current weather display with temperature, conditions, and wind speed
 - 5-day weather forecast
 - Search by city name, ZIP code, or coordinates
-- Automatic location detection
+- Automatic location detection (requires HTTPS in production)
 - Responsive design for all devices
 - Error handling and user feedback
 - Environment variable configuration for API key
@@ -43,6 +60,17 @@ A React-based weather application that provides current weather and 5-day foreca
 
 The app will be available at `http://localhost:3000`
 
+## Important Notes
+
+### Geolocation API Requirements
+
+The "Use My Location" feature requires a secure context (HTTPS) to work in production environments. This is a browser security requirement for accessing sensitive APIs like geolocation. The feature will work in the following scenarios:
+
+- On localhost (development environment)
+- On HTTPS-enabled domains (production environment)
+
+If you're deploying to a hosting service that doesn't provide HTTPS by default, you'll need to configure it to use HTTPS for the geolocation feature to work.
+
 ## Project Structure
 
 ```
@@ -69,6 +97,14 @@ weather-app/
 
 This project is configured for deployment on Vercel. The `vercel.json` file contains the necessary configuration for proper routing and build settings.
 
+### Vercel Deployment
+
+Vercel provides HTTPS by default, so the geolocation feature should work correctly when deployed there. If you're experiencing issues with the "Use My Location" feature on Vercel, please check:
+
+1. That your browser is allowing location access for the site
+2. That you're accessing the site via HTTPS
+3. That your browser supports the Geolocation API
+
 ## Contributing
 
 1. Fork the repository
@@ -83,7 +119,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter)
+**Sweekar Sonti** - [LinkedIn](https://www.linkedin.com/in/sweekarsonti)  
 Project Link: [https://github.com/beginner4a3/weather-app](https://github.com/beginner4a3/weather-app)
 
 ## Available Scripts
