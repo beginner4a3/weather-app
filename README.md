@@ -17,8 +17,6 @@ Product Managers play key roles in a company. Hiring for those positions shouldn
 
 It is our vision, to make it simple and beneficial for Product Managers to accurately display their skills and empower hiring companies to choose the right Product Manager every time.
 
-**Sign up now:** [PM Accelerator](https://pm-accelerator.webflow.io/)
-
 ## Features
 
 - Current weather display with temperature, conditions, and wind speed

@@ -153,7 +153,6 @@ function App() {
             <p>Hiring and getting hired for product management roles is hard. In the short timeframe of an interview, it is difficult to precisely assess and display the necessary, complex skills.</p>
             <p>Product Managers play key roles in a company. Hiring for those positions shouldn't be a guessing game.</p>
             <p>It is our vision, to make it simple and beneficial for Product Managers to accurately display their skills and empower hiring companies to choose the right Product Manager every time.</p>
-            <a href="https://pm-accelerator.webflow.io/" target="_blank" rel="noopener noreferrer" className="pm-accelerator-link">Sign up now: PM Accelerator</a>
           </div>
         </div>
       </footer>
