@@ -150,9 +150,19 @@ function App() {
           </div>
           <div className="pm-accelerator-info">
             <h3>About PM Accelerator</h3>
-            <p>Hiring and getting hired for product management roles is hard. In the short timeframe of an interview, it is difficult to precisely assess and display the necessary, complex skills.</p>
-            <p>Product Managers play key roles in a company. Hiring for those positions shouldn't be a guessing game.</p>
-            <p>It is our vision, to make it simple and beneficial for Product Managers to accurately display their skills and empower hiring companies to choose the right Product Manager every time.</p>
+            <p>The Product Manager Accelerator Program is designed to support PM professionals through every stage of their careers. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.</p>
+            <p>Our Product Manager Accelerator community are ambitious and committed. Through our program they have learnt, honed and developed new PM and leadership skills, giving them a strong foundation for their future endeavors.</p>
+            <div className="services-list">
+              <h4>Our Services:</h4>
+              <ul>
+                <li>🚀 PMA Pro - End-to-end product manager job hunting program</li>
+                <li>🚀 AI PM Bootcamp - Hands-on AI Product Management skills</li>
+                <li>🚀 PMA Power Skills - Sharpen product management and leadership skills</li>
+                <li>🚀 PMA Leader - Accelerate your career to Director and executive levels</li>
+                <li>🚀 1:1 Resume Review - Stand out with a killer product manager resume</li>
+              </ul>
+            </div>
+            <p>We also published over 500+ free training and courses. Check out our YouTube channel and Instagram for free learning resources.</p>
           </div>
         </div>
       </footer>
