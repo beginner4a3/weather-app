@@ -55,22 +55,15 @@ function App() {
         try {
           const { latitude, longitude } = position.coords;
           const locationString = `${latitude},${longitude}`;
+          await fetchWeatherData(locationString);
           
-          const currentWeather = await getCurrentWeather(locationString);
-          const forecast = await getForecast(locationString);
-          
-          setWeatherData(currentWeather);
-          setForecastData(forecast);
-          
-          if (currentWeather.name) {
-            setLocation(`${currentWeather.name}, ${currentWeather.sys.country}`);
+          if (weatherData?.name) {
+            setLocation(`${weatherData.name}, ${weatherData.sys.country}`);
           } else {
             setLocation(`Coordinates: ${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
           }
         } catch (error) {
           setError(`Error getting weather for your location: ${error.message}`);
-        } finally {
-          setLoading(false);
         }
       },
       (error) => {
@@ -93,7 +86,6 @@ function App() {
             );
             break;
           default:
-            // Check if we're in a non-secure context (HTTP instead of HTTPS)
             if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
               setError(
                 'Geolocation requires a secure connection (HTTPS). Please try searching by city name instead, or access this site via HTTPS.'
